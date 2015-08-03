@@ -1,0 +1,5 @@
+node_modules
+exlib
+coverage
+test/fixtures
+test/exlib
