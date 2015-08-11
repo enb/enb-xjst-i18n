@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "enb-bem-i18n": "v1.0.0-beta4",
-    "enb-xjst": "2.0.0-beta1",
+    "enb-xjst": "2.0.0-beta2",
     "vow": "0.4.10"
   },
   "devDependencies": {
