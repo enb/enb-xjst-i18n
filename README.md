@@ -52,4 +52,4 @@ nodeConfig.addTech([ require('enb-xjst-i18n/techs/bemhtml-i18n'), { lang: {lang}
 Лицензия
 --------
 
-© 2014 YANDEX LLC. Код лицензирован [Mozilla Public License 2.0](LICENSE.txt).
+© 2015 YANDEX LLC. Код лицензирован [Mozilla Public License 2.0](LICENSE.txt).
