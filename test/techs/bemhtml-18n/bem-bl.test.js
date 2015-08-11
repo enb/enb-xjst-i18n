@@ -9,7 +9,7 @@ var path = require('path'),
     bemhtmlContents,
     core;
 
-describe('xjst bemhtml-i18n v1', function () {
+describe('bemhtml-i18n for bem-bl', function () {
     before(function () {
         var coreFilename = './test/fixtures/bem-core/common.blocks/i-bem/__i18n/i-bem__i18n.i18n/core.js',
             bemhtmlFilename = require.resolve('enb-xjst/node_modules/bem-bl-xjst/i-bem__html.bemhtml');
@@ -133,11 +133,13 @@ describe('xjst bemhtml-i18n v1', function () {
             var bundle = new MockNode('bundle'),
                 cache = bundle.getNodeCache('bundle.bemhtml.lang.js'),
                 basename = 'bundle.keysets.lang.js',
-                filename = path.resolve('bundle', basename);
+                relPath = path.join('bundle', basename),
+                cacheKey = 'keysets-file-' + relPath,
+                filename = path.resolve(relPath);
 
             dropRequireCache(require, filename);
             require(filename);
-            cache.cacheFileInfo('keysets-file-' + basename, filename);
+            cache.cacheFileInfo(cacheKey, filename);
 
             mock({
                 blocks: {
@@ -191,11 +193,13 @@ describe('xjst bemhtml-i18n v1', function () {
             var bundle = new MockNode('bundle'),
                 cache = bundle.getNodeCache('bundle.bemhtml.lang.js'),
                 basename = 'bundle.keysets.lang.js',
-                filename = path.resolve('bundle', basename);
+                relPath = path.join('bundle', basename),
+                cacheKey = 'keysets-file-' + relPath,
+                filename = path.resolve(relPath);
 
             dropRequireCache(require, filename);
             require(filename);
-            cache.cacheFileInfo('keysets-file-' + basename, filename);
+            cache.cacheFileInfo(cacheKey, filename);
 
             mock({
                 blocks: {

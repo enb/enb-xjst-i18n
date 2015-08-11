@@ -8,7 +8,7 @@ var path = require('path'),
     core = require('../../fixtures/bem-core-v3/common.blocks/i18n/i18n.i18n.js').i18n.i18n,
     bemhtmlContents;
 
-describe('xjst bemhtml-i18n v2', function () {
+describe('bemhtml-i18n for bem-core', function () {
     before(function () {
         var bemhtmlFilename = require.resolve('enb-xjst/node_modules/bem-bl-xjst/i-bem__html.bemhtml');
         bemhtmlContents = fs.readFileSync(path.resolve(bemhtmlFilename), { encoding: 'utf-8' });
@@ -50,7 +50,7 @@ describe('xjst bemhtml-i18n v2', function () {
 
         return build(keysets)
             .fail(function (error) {
-                error.message.must.be('XJST templates can not be used with bem-core i18n system');
+                error.message.must.be('XJST templates can not be used with bem-core i18n system.');
             });
     });
 });
